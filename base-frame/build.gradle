@@ -23,11 +23,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 publish {
     userOrg = 'zhousuqiang'
-    groupId = 'com.owen'
+    groupId = 'com.owen.base'
     artifactId = 'base-frame'
     publishVersion = '1.0.0'
     desc = 'BaseFrame'
