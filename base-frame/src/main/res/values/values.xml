@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CancelableDialog">
+        <attr name="android:gravity" />
+        <attr name="dialogFixedWidthMajor" format="dimension|fraction" />
+        <attr name="dialogFixedWidthMinor" format="dimension|fraction" />
+    </declare-styleable>
+
+    <style name="ViewsBaseDialogFragment" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <!-- 额外支持设置 dialog 停靠方式 -->
+        <!--<item name="android:gravity">bottom</item>-->
+    </style>
+
+    <declare-styleable name="AutoTurnViewPager">
+        <attr name="bv_canLoop" format="boolean" />
+        <attr name="bv_canTurn" format="boolean" />
+        <attr name="bv_autoTurnTime" format="integer|reference" />
+        <attr name="bv_scrollDuration" format="integer|reference" />
+        <attr name="bv_isTouchScroll" format="boolean" />
+        <attr name="bv_reverse" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground" />
+        <attr name="android:foregroundGravity" />
+    </declare-styleable>
+</resources>
