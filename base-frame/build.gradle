@@ -34,7 +34,7 @@ publish {
     userOrg = 'zhousuqiang'
     groupId = 'com.owen.base'
     artifactId = 'base-frame'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.4'
     desc = 'BaseFrame'
     website = 'https://github.com/zhousuqiang/BaseFrame'
 }

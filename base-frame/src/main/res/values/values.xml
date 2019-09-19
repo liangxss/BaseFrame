@@ -4,18 +4,9 @@
         <attr name="android:gravity" />
         <attr name="dialogFixedWidthMajor" format="dimension|fraction" />
         <attr name="dialogFixedWidthMinor" format="dimension|fraction" />
+        <attr name="dialogFixedHeightMajor" format="dimension|fraction" />
+        <attr name="dialogFixedHeightMinor" format="dimension|fraction" />
     </declare-styleable>
-
-    <style name="ViewsBaseDialogFragment" parent="@android:style/Theme.Dialog">
-        <item name="android:windowTitleStyle">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:backgroundDimEnabled">true</item>
-
-        <!-- 额外支持设置 dialog 停靠方式 -->
-        <!--<item name="android:gravity">bottom</item>-->
-    </style>
 
     <declare-styleable name="AutoTurnViewPager">
         <attr name="bv_canLoop" format="boolean" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ViewsBaseDialogFragment" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <!-- 进场|退场 动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/dialog_bottom_in_out_anim_style</item>-->
+
+        <!-- 额外支持设置 dialog 停靠方式 -->
+        <!--<item name="android:gravity">bottom</item>-->
+
+        <!-- 指定宽度，可具体值，也可百分比 -->
+        <!--<item name="dialogFixedWidthMajor">100%</item>-->
+        <!-- 指定高度，可具体值，也可百分比 -->
+        <!--<item name="dialogFixedHeightMajor">100%</item>-->
+    </style>
+
+    <style name="dialog_bottom_in_out_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_base_dialog_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_base_dialog_bottom_exit</item>
+    </style>
+
+    <style name="dialog_right_in_out_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_base_dialog_right_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_base_dialog_right_exit</item>
+    </style>
+
+</resources>

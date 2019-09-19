@@ -51,19 +51,27 @@ public class CancelableDialog extends Dialog {
         Resources resources = context.getResources();
         final boolean isPortrait = resources.getConfiguration().orientation == ORIENTATION_PORTRAIT;
         if (isPortrait) {
-            if (!a.hasValue(R.styleable.CancelableDialog_dialogFixedWidthMinor)) {
-                return;
+            if (a.hasValue(R.styleable.CancelableDialog_dialogFixedWidthMinor)) {
+                final TypedValue typedValue = new TypedValue();
+                a.getValue(R.styleable.CancelableDialog_dialogFixedWidthMinor, typedValue);
+                handleWidth(typedValue);
             }
-            final TypedValue fixedWidthMinor = new TypedValue();
-            a.getValue(R.styleable.CancelableDialog_dialogFixedWidthMinor, fixedWidthMinor);
-            handleWidth(fixedWidthMinor);
+            if (a.hasValue(R.styleable.CancelableDialog_dialogFixedHeightMinor)) {
+                final TypedValue typedValue = new TypedValue();
+                a.getValue(R.styleable.CancelableDialog_dialogFixedHeightMinor, typedValue);
+                handleHeight(typedValue);
+            }
         } else {
-            if (!a.hasValue(R.styleable.CancelableDialog_dialogFixedWidthMajor)) {
-                return;
+            if (a.hasValue(R.styleable.CancelableDialog_dialogFixedWidthMajor)) {
+                final TypedValue typedValue = new TypedValue();
+                a.getValue(R.styleable.CancelableDialog_dialogFixedWidthMajor, typedValue);
+                handleWidth(typedValue);
             }
-            final TypedValue fixedWidthMajor = new TypedValue();
-            a.getValue(R.styleable.CancelableDialog_dialogFixedWidthMajor, fixedWidthMajor);
-            handleWidth(fixedWidthMajor);
+            if (a.hasValue(R.styleable.CancelableDialog_dialogFixedHeightMajor)) {
+                final TypedValue typedValue = new TypedValue();
+                a.getValue(R.styleable.CancelableDialog_dialogFixedHeightMajor, typedValue);
+                handleHeight(typedValue);
+            }
         }
         a.recycle();
 
@@ -87,6 +95,28 @@ public class CancelableDialog extends Dialog {
             Window window = getWindow();
             WindowManager.LayoutParams attributes = window.getAttributes();
             attributes.width = w;
+            window.setAttributes(attributes);
+        }
+    }
+
+    private void handleHeight(TypedValue tvh) {
+        Resources resources = getContext().getResources();
+        final DisplayMetrics metrics = resources.getDisplayMetrics();
+        int h = 0;
+        boolean hasValue = true;
+        if (tvh.type != TypedValue.TYPE_NULL) {
+            if (tvh.type == TypedValue.TYPE_DIMENSION) {
+                h = (int) tvh.getDimension(metrics);
+            } else if (tvh.type == TypedValue.TYPE_FRACTION) {
+                h = (int) tvh.getFraction(metrics.widthPixels, metrics.widthPixels);
+            } else {
+                hasValue = false;
+            }
+        }
+        if (hasValue) {
+            Window window = getWindow();
+            WindowManager.LayoutParams attributes = window.getAttributes();
+            attributes.height = h;
             window.setAttributes(attributes);
         }
     }
