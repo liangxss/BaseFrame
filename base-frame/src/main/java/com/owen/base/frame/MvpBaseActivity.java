@@ -38,6 +38,9 @@ public abstract class MvpBaseActivity<P extends MvpBasePresenter<V>, V extends M
         initBundleExtra(savedInstanceState);
         initViews();
         initListeners();
+        initDatas();
+
+
 
         if (null != mPresenter) {
             getLifecycle().addObserver(mPresenter);
@@ -132,4 +135,9 @@ public abstract class MvpBaseActivity<P extends MvpBasePresenter<V>, V extends M
      * 初始化view监听
      */
     protected void initListeners() {}
+
+    /**
+     * 初始化数据
+     */
+    protected void initDatas() {}
 }

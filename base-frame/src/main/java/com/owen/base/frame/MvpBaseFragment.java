@@ -59,6 +59,7 @@ public abstract class MvpBaseFragment<P extends MvpBaseFragmentPresenter<V>, V e
             initBundleExtra(savedInstanceState);
             initViews(view);
             initListeners();
+            initDatas();
             if (getUserVisibleHint()) {
                 onLazyLoad();
             }
@@ -193,4 +194,9 @@ public abstract class MvpBaseFragment<P extends MvpBaseFragmentPresenter<V>, V e
      * 初始化view监听
      */
     protected void initListeners() {}
+
+    /**
+     * 初始化数据
+     */
+    protected void initDatas() {}
 }

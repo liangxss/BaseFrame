@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdk
+    compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdk
-        targetSdkVersion rootProject.ext.targetSdk
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
 
         versionCode 1
         versionName "1.0"
@@ -34,7 +34,7 @@ publish {
     userOrg = 'zhousuqiang'
     groupId = 'com.owen.base'
     artifactId = 'base-frame'
-    publishVersion = '1.0.4'
+    publishVersion = '1.0.6'
     desc = 'BaseFrame'
     website = 'https://github.com/zhousuqiang/BaseFrame'
 }
@@ -42,7 +42,7 @@ publish {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "com.android.support:appcompat-v7:$support"
+    implementation "com.android.support:appcompat-v7:$supportVersion"
     api "com.android.support:multidex:$multidexVersion"
     api "com.google.code.gson:gson:$gson"
 }
