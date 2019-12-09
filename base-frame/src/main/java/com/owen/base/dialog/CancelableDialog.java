@@ -108,7 +108,7 @@ public class CancelableDialog extends Dialog {
             if (tvh.type == TypedValue.TYPE_DIMENSION) {
                 h = (int) tvh.getDimension(metrics);
             } else if (tvh.type == TypedValue.TYPE_FRACTION) {
-                h = (int) tvh.getFraction(metrics.widthPixels, metrics.widthPixels);
+                h = (int) tvh.getFraction(metrics.heightPixels, metrics.heightPixels);
             } else {
                 hasValue = false;
             }

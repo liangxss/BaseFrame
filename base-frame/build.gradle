@@ -34,7 +34,7 @@ publish {
     userOrg = 'zhousuqiang'
     groupId = 'com.owen.base'
     artifactId = 'base-frame'
-    publishVersion = '1.0.6'
+    publishVersion = '1.1.0'
     desc = 'BaseFrame'
     website = 'https://github.com/zhousuqiang/BaseFrame'
 }
@@ -45,4 +45,5 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$supportVersion"
     api "com.android.support:multidex:$multidexVersion"
     api "com.google.code.gson:gson:$gson"
+    api 'com.blankj:utilcode:1.25.9'
 }

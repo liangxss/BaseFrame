@@ -2,6 +2,8 @@ package com.owen.base.utils;
 
 import android.content.Context;
 
+import com.blankj.utilcode.util.Utils;
+
 /**
  * @author ZhouSuQiang
  * @email zhousuqiang@126.com
@@ -9,7 +11,7 @@ import android.content.Context;
  */
 public class UtilsManager {
     public static void init(Context context) {
-        ToastUtils.initToast(context);
+        Utils.init(context);
         SharePreferenceUtils.init(context);
         ScreenUtils.init(context);
     }
