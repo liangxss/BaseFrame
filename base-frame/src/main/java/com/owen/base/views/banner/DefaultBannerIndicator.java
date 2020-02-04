@@ -2,9 +2,6 @@ package com.owen.base.views.banner;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 /**
  * Created by ZhouSuQiang on 2017/12/7.

@@ -1,7 +1,8 @@
 package com.owen.base.frame;
 
 import android.app.Application;
-import android.support.multidex.MultiDexApplication;
+
+import androidx.multidex.MultiDexApplication;
 
 public class BaseApplication extends MultiDexApplication {
     private static BaseApplication sBaseApplication;

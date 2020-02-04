@@ -34,7 +34,7 @@ publish {
     userOrg = 'zhousuqiang'
     groupId = 'com.owen.base'
     artifactId = 'base-frame'
-    publishVersion = '1.1.0'
+    publishVersion = '2.0.0'
     desc = 'BaseFrame'
     website = 'https://github.com/zhousuqiang/BaseFrame'
 }
@@ -42,8 +42,8 @@ publish {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "com.android.support:appcompat-v7:$supportVersion"
-    api "com.android.support:multidex:$multidexVersion"
-    api "com.google.code.gson:gson:$gson"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.multidex:multidex:2.0.1'
+    api "com.google.code.gson:gson:2.8.5"
     api 'com.blankj:utilcode:1.25.9'
 }

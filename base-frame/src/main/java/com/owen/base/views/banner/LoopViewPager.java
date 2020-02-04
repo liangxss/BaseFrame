@@ -1,7 +1,8 @@
 package com.owen.base.views.banner;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
+
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 
 public class LoopViewPager extends ViewPager {
-    private List<OnPageChangeListener> mOuterPageChangeListeners;
+    private List<ViewPager.OnPageChangeListener> mOuterPageChangeListeners;
     private AbsBannerAdapter mAdapter;
     private PageTransformer mTransformer;
     private boolean mIsTouchScroll = true;
